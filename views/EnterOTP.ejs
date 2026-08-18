@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verify OTP</title>
+
+    <link rel="stylesheet" href="/css/verifyotp.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>NIT Bazaar</h1>
+
+        <h2>Verify OTP</h2>
+
+        <p>
+            We have sent a 6-digit OTP to
+        </p>
+
+        <h3><%= email %></h3>
+
+        <form action="/verify" method="POST">
+
+            <input
+                type="hidden"
+                name="email"
+                value="<%= email %>">
+
+            <input
+                type="text"
+                name="otp"
+                maxlength="6"
+                placeholder="Enter 6-digit OTP"
+                required>
+
+            <button type="submit">
+                Verify OTP
+            </button>
+
+        </form>
+
+        <a href="/otp">
+            Resend OTP
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

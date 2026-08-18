@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(30,60,114,.80),
+    rgba(42,82,152,.80)),
+    url("/images/homebg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.card{
+
+    width:430px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.30);
+
+    text-align:center;
+
+}
+
+.card h1{
+
+    color:#1E3C72;
+
+    margin-bottom:10px;
+
+}
+
+.card h2{
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:gray;
+
+    margin-bottom:25px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#1E3C72;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    color:white;
+
+    background:linear-gradient(135deg,#1E3C72,#2A5298);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.bottom{
+
+    margin-top:20px;
+
+}
+
+.bottom a{
+
+    text-decoration:none;
+
+    color:#1E3C72;
+
+    font-weight:600;
+
+}
+
+.bottom a:hover{
+
+    text-decoration:underline;
+
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Product Details</title>
+
+<link rel="stylesheet"
+href="/css/productdetails.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>NIT Bazaar</h2>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/products">Products</a>
+
+<a href="/profile">Profile</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<div class="image">
+
+<img
+src="<%= product.ImageUrl %>"
+alt="Product">
+
+</div>
+
+<div class="details">
+
+<h1><%= product.Name %></h1>
+
+<h2>₹ <%= product.Cost %></h2>
+
+<p>
+
+<strong>Category :</strong>
+
+<%= product.Category %>
+
+</p>
+
+<p>
+
+<strong>Seller :</strong>
+
+<%= product.UserName %>
+
+</p>
+
+<p>
+
+<strong>College :</strong>
+
+<%= product.College %>
+
+</p>
+
+<h3>Description</h3>
+
+<p>
+
+<%= product.Description %>
+
+</p>
+
+<% if(product.UserEmail===email){ %>
+
+<div class="buttons">
+
+<a href="/edit/<%= product._id %>">
+
+<button>
+
+Edit Product
+
+</button>
+
+</a>
+<form
+action="/delete/<%= product._id %>"
+method="POST"
+onsubmit="return confirm('Are you sure you want to delete this product?')">
+
+<button class="delete">
+
+Delete Product
+
+</button>
+
+</form>
+</form>
+
+</div>
+
+<% } %>
+
+<a
+href="/products"
+class="back">
+
+← Back to Products
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

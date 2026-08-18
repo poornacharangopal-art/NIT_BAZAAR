@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Added</title>
+
+<link rel="stylesheet" href="/css/productadded.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="icon">✅</div>
+
+<h1>Product Added Successfully!</h1>
+
+<p>
+
+Your product has been listed on NIT Bazaar.
+
+</p>
+
+<div class="details">
+
+<p><strong>Product :</strong> <%= product.Name %></p>
+
+<p><strong>Price :</strong> ₹ <%= product.Cost %></p>
+
+<p><strong>Category :</strong> <%= product.Category %></p>
+
+</div>
+
+<div class="buttons">
+
+<a href="/products">
+
+<button>
+
+View Products
+
+</button>
+
+</a>
+
+<a href="/addproduct">
+
+<button class="second">
+
+Add Another Product
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

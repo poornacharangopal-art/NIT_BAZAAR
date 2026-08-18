@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(15,35,80,0.8),
+    rgba(35,70,140,0.8)),
+    url("/images/homebg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.card{
+
+    width:430px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+
+}
+
+.card h1{
+
+    color:#1E3C72;
+
+    margin-bottom:10px;
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    margin-bottom:8px;
+
+}
+
+.card h3{
+
+    color:#2A5298;
+
+    margin-bottom:25px;
+
+    word-break:break-word;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    text-align:center;
+
+    letter-spacing:4px;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#1E3C72;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:linear-gradient(135deg,#1E3C72,#2A5298);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    text-decoration:none;
+
+    color:#1E3C72;
+
+    font-weight:500;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}

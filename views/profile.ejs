@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>My Profile</title>
+
+<link rel="stylesheet"
+href="/css/profile.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>NIT Bazaar</h2>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/products">Products</a>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<div class="profile-card">
+<div class="avatar">
+
+<%= user.UserName.charAt(0).toUpperCase() %>
+
+</div>
+
+<h1><%= user.UserName %></h1>
+
+<p>Student Seller</p>
+
+<hr>
+
+<div class="info">
+
+<p>
+
+<strong>User ID :</strong>
+
+<%= user.UserId %>
+
+</p>
+
+<p>
+
+<strong>Email :</strong>
+
+<%= user.EmailId %>
+
+</p>
+
+<p>
+
+<strong>College :</strong>
+
+<%= user.College %>
+
+</p>
+
+</div>
+
+<div class="buttons">
+
+<a href="/myproducts">
+
+<button>
+
+My Products
+
+</button>
+
+</a>
+
+<a href="/dashboard">
+
+<button>
+
+Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

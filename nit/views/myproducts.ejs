@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>My Products</title>
+
+<link rel="stylesheet" href="/css/myproducts.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>NIT Bazaar</h2>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/addproduct">Add Product</a>
+
+<a href="/products">Products</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1>My Products</h1>
+
+<p>
+
+You have listed
+
+<b><%= products.length %></b>
+
+products.
+
+</p>
+
+<% if(products.length==0){ %>
+
+<h2>No Products Added Yet</h2>
+
+<a href="/addproduct">
+
+<button>Add Your First Product</button>
+
+</a>
+
+<% } %>
+
+<div class="cards">
+
+<% products.forEach(product=>{ %>
+
+<div class="card">
+
+<img src="<%= product.ImageUrl %>">
+
+<h2><%= product.Name %></h2>
+
+<h3>₹ <%= product.Cost %></h3>
+
+<p>
+
+Category :
+<%= product.Category %>
+
+</p>
+
+<div class="buttons">
+
+<a href="/product/<%= product._id %>">
+
+<button>
+
+View
+
+</button>
+
+</a>
+
+<a href="/edit/<%= product._id %>">
+
+<button>
+
+Edit
+
+</button>
+
+</a>
+<form
+action="/delete/<%= product._id %>"
+method="POST"
+onsubmit="return confirm('Are you sure you want to delete this product?')">
+
+<button class="delete">
+
+Delete
+
+</button>
+
+</form>
+</div>
+
+</div>
+
+<% }) %>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

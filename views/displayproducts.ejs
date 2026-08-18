@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Products</title>
+
+    <link rel="stylesheet" href="/css/products.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>NIT Bazaar</h2>
+
+    <div class="nav-links">
+
+        <a href="/dashboard">Dashboard</a>
+
+        <a href="/addproduct">Add Product</a>
+
+        <a href="/myproducts">My Products</a>
+
+        <a href="/profile">Profile</a>
+
+    </div>
+
+</nav>
+
+<section class="heading">
+
+    <h1>Available Products</h1>
+
+    <p>Find products sold by students of your college.</p>
+
+</section>
+
+<div class="filters">
+
+    <form action="/products" method="GET">
+
+        <select name="sort">
+
+            <option value="">Sort By</option>
+
+            <option value="lowtohigh">Price : Low to High</option>
+
+            <option value="hightolow">Price : High to Low</option>
+
+        </select>
+
+        <button type="submit">
+
+            Apply
+
+        </button>
+
+    </form>
+
+</div>
+
+<div class="products">
+
+<% if(products.length===0){ %>
+
+    <h2>No Products Available</h2>
+
+<% } %>
+
+<% products.forEach(product=>{ %>
+
+<div class="card">
+
+    <img src="<%= product.ImageUrl %>" alt="Product">
+
+    <h2>
+
+        <%= product.Name %>
+
+    </h2>
+
+    <h3>
+
+        ₹ <%= product.Cost %>
+
+    </h3>
+
+    <p>
+
+        📂 <strong>Category :</strong>
+        <%= product.Category %>
+
+    </p>
+
+    <p>
+
+        👤 <strong>Seller :</strong>
+        <%= product.UserName %>
+
+    </p>
+
+    <p>
+
+        🏫 <strong>College :</strong>
+        <%= product.College %>
+
+    </p>
+
+    <a href="/product/<%= product._id %>">
+
+        <button>
+
+            View Details
+
+        </button>
+
+    </a>
+
+</div>
+
+<% }) %>
+
+</div>
+
+</body>
+
+</html>
