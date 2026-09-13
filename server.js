@@ -27,7 +27,15 @@ app.use(express.static("public"));
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGO_URI
+    }),
+
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24
+    }
 }));
 
 app.use(authRoutes);
