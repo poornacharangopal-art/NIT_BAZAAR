@@ -1,15 +1,21 @@
 {
-"version": 2,
-"builds": [
-{
-"src": "server.js",
-"use": "@vercel/node"
-}
-],
-"routes": [
-{
-"src": "/(.*)",
-"dest": "server.js"
-}
-]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "app": {
+      "root": ".",
+      "framework": "express"
+    },
+    "nit": {
+      "root": "nit",
+      "framework": "express"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    }
+  ]
 }
