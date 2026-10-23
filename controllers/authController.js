@@ -187,7 +187,7 @@ exports.dashboard = async (req, res) => {
             return res.redirect("/");
         }
 
-        return res.render("dashboard", {
+        return res.render("Dashboard", {
             name: user.UserName
         });
 
